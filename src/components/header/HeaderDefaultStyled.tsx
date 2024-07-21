@@ -8,14 +8,10 @@ const HeaderDefaultStyled = styled.header`
   justify-content: center;
   align-items: center;
   gap: 20px;
-  a,
-  a:visited {
-    font-weight: 500;
-    color: #ffffff;
-    text-decoration: inherit;
-  }
-  a:hover {
-    color: #535bf2;
+  h1 {
+    font-size: 2.5em;
+    line-height: 1.1;
+    color: ${props => props.theme.colors.secondary};
   }
 `;
 
