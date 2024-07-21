@@ -1,3 +1,3 @@
-# API POKEMON LISTAGEM
+# LISTAGEM DE POKEMONS
 
-Uma simples listagem com paginação de pokemons retirada da [pokeapi](https://pokeapi.co/)
+Uma simples listagem com paginação de pokemons retirada da api [pokeapi](https://pokeapi.co/)
