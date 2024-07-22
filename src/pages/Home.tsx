@@ -27,7 +27,7 @@ function Home() {
           name="search"
           value={search}
           onChange={e => setSearch(e.target.value)}
-          placeholder="Pesquisar pokemons"
+          placeholder="Pesquisar pokemons que estão nesta pagina"
         />
         <ul>
           {poke
