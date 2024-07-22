@@ -5,9 +5,11 @@ import PokeType from '../types/PokeType';
 import { api } from '../api/api';
 import PokeStyled from '../components/PokeStyled';
 import ButtonContainer from '../components/button-default/ButtonContainer';
+import InputDefaultStyled from '../components/InputDefaultStyled';
 
 function Home() {
   const [poke, setPoke] = useState<PokeType[]>([]);
+  const [search, setSearch] = useState<string>('');
   const [offset, setOffset] = useState<number>(0);
   useEffect(() => {
     async function getPoke() {
@@ -20,10 +22,19 @@ function Home() {
   return (
     <>
       <PageDefault>
+        <InputDefaultStyled
+          type="text"
+          name="search"
+          value={search}
+          onChange={e => setSearch(e.target.value)}
+          placeholder="Pesquisar pokemons"
+        />
         <ul>
-          {poke.map(item => (
-            <PokeStyled>{item.name}</PokeStyled>
-          ))}
+          {poke
+            .filter(item => item.name.toLocaleLowerCase().includes(search.toLocaleLowerCase()))
+            .map(item => (
+              <PokeStyled>{item.name}</PokeStyled>
+            ))}
         </ul>
         <ButtonContainer>
           <ButtonDefault

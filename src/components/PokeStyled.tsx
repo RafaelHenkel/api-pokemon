@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const PokeStyled = styled.li`
-  width: 40vw;
+  width: 38vw;
   height: 6vh;
   margin: 2vh 0;
   padding: 0 1vw;
